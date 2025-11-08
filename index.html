@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket Scorecard</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>ScoreCard</h1>
@@ -16,6 +17,30 @@
             <option value="2">Second</option>
         </select>
     </div>
+
+    <!-- Main Score Display -->
+                <div class="text-center">
+                    <p class="text-lg font-semibold text-gray-600">Team Batting <span id="battingTeamName" class="text-blue-700"></span></p>
+                    <div class="flex items-baseline justify-center gap-4">
+                        <span id="mainScoreDisplay" class="text-7xl font-bold text-gray-900"></span>
+                        <span id="oversDisplay" class="text-3xl font-semibold text-gray-700"></span>
+                    </div>
+                </div>
+
+                <!-- CRR-->
+                <div class="mt-4 flex justify-around">
+                    <div class="text-center">
+                        <p class="text-sm font-medium text-gray-500">CRR</p>
+                        <p id="crrDisplay" class="text-2xl font-bold text-gray-800"></p>
+                    </div>
+                    <!--RRR-->
+                    <div id="rrrSection" class="text-center">
+                        <p class="text-sm font-medium text-gray-500">Target <span id="targetDisplay"></span></p>
+                        <p id="rrrDisplay" class="text-2xl font-bold text-red-600"></p>
+                        <p class="text-xs text-gray-500">RRR</p>
+                    </div>
+                </div>
+            </div>
 
     <div> 
         <h2 class="js-score"></h2>
@@ -55,38 +80,77 @@
         </div>    
 
         <div>
-            <h4>Current Players</h4>
+       <h4>Current Players</h4>
 
-            <div>
-                <label for="strike" class="block text-sm font-medium text-gray-700">Strike</label>
-                <input type="text" id="onstrike" name="onstrike" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Batsman">
-            </div>
+         <section class="player-tables">
+            <div class="batsmen-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Batsman</th>
+                            <th>R</th>
+                            <th>B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="on-strike"><input type="text" id="on-strike" placeholder="on-strike"></td>
+                            <td id="on-strike-score">0</td>
+                            <td id="on-strike-balls">0</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="non-strike" placeholder="non-strike"></td>
+                            <td id="non-strike-score">0</td>
+                            <td id="non-strike-balls">0</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <div>
-                <label for="nonstrike" class="block text-sm font-medium text-gray-700">Non Strike</label>
-                <input type="text" id="nonstrike" name="nonstrike" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Batsman">
-            </div>
-
-            <div>
-                <label for="currentbowler" class="block text-sm font-medium text-gray-700">Current Bowler</label>
-                <input type="text" id="currentbowler" name="currentbowler" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Bowler">
-            </div>
+                </div>
+                <div class="bowler-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Bowler</th>
+                                <th>O</th>        <!-- Overs -->
+                                <th>R</th>        <!-- Runs -->
+                                <th>W</th>        <!-- Wickets -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" id="bowler-name" placeholder="Current Bowler"></td>
+                                <td id="bowler-overs">0</td>
+                                <td id="bowler-runs">0</td>
+                                <td id="bowler-wickets">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
             <div>
                 <button id="btnUpdateplayers">Update Players</button> 
             </div>
+ 
+
+            <!--Extras-->
+
+            <div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Extras</h3>
+                <div class="flex justify-between mt-1">
+                    <span class="font-medium text-gray-600">Wides (WD):</span>
+                    <span id="wideExtras" class="font-bold text-lg text-gray-900"></span>
+                </div>
+                <div class="flex justify-between mt-1">
+                    <span class="font-medium text-gray-600">No Balls (NB):</span>
+                    <span id="noBallExtras" class="font-bold text-lg text-gray-900"></span>
+                </div>
+            </div> 
+
+
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-<script src="script.js"></script>
 </body>
 </html>
