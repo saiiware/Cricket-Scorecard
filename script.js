@@ -2,10 +2,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // ==========================================
-    //               PAGE 1 LOGIC
+    //              INDEX PAGE LOGIC
     // ==========================================
     
-    // Find the "Next" button from Page 1
+    // Find the "Next" button from INDEX PAGE
     // (Make sure your HTML button has id="next-button-page1")
     const page1NextButton = document.getElementById("next-button-page1");
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
             backButton.addEventListener("click", function(event) {
                 event.preventDefault();
                 // Go back to Page 1
-                window.location.href = "page1.html";
+                window.location.href = "index.html";
             });
         }
 
@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     let input = document.getElementById(`Player${i}`);
                     if (!input || input.value.trim() === "") {
                         allFieldsFilled = false;
-                        input.style.border = "2px solid red"; // Highlight empty box
                     } else {
                         input.style.border = ""; // Remove highlight if fixed
                         team1Players.push(input.value.trim());
@@ -127,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     localStorage.setItem("battingTeam", battingTeamName);
 
                     // Redirect to Page 3
-                    window.location.href = "index.html";
+                    window.location.href = "score.html";
                 }
             });
         }
@@ -392,3 +391,4 @@ function undoScore(lr) //Function to undo last selection
 
     document.querySelector('.js-score').innerHTML=`${score.runs}/${score.wickets}(${score.overs})`;
 }
+
