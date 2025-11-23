@@ -12,7 +12,7 @@
 
 The application is deployed and ready to use. Click the link below to start scoring:
 
-👉 **[crickscoremmcoe.netlify.app](https://crickscoremmcoe.netlify.app)**
+👉 **[vedant102-code.github.io/Cricket-Scorecard/](https://vedant102-code.github.io/Cricket-Scorecard/)**
 
 ---
 
