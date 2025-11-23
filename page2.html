@@ -22,7 +22,8 @@
                     <h2>Players</h2>
                     <div class="team-name">
                         <div class="team">
-                            <h3>Team 1 Player Names</h3>
+                            <!-- Added ID here -->
+                            <h3 id="team1-header">Team 1 Player Names</h3>
 
                             <!-- TEAM 1 IDs: Player1 to Player11 -->
                             <label for="Player1"></label>
@@ -50,9 +51,10 @@
                         </div>
 
                         <div class="team">
-                            <h3 class="team1">Team 2 Player Names</h3>
+                            <!-- Added ID here -->
+                            <h3 id="team2-header">Team 2 Player Names</h3>
 
-                            <!-- TEAM 2 IDs: t2-player1 to t2-player11 (Must be unique!) -->
+                            <!-- TEAM 2 IDs: t2-player1 to t2-player11 -->
                             <label for="t2-player1"></label>
                             <input type="text" class="playernames" id="t2-player1" placeholder="Player 1">
                             <label for="t2-player2"></label>
@@ -93,11 +95,9 @@
                 
                 <div class="nextbutton-box">
                     <div>
-                        <!-- ID added for Back functionality -->
                         <button type="submit" class="btn-grad" id="back-button">Back</button>
                     </div>
                     <div>
-                        <!-- ID added for Next functionality -->
                         <button type="submit" class="btn-grad" id="page2-next-button">Next</button>
                     </div>
                 </div>
